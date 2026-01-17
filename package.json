@@ -1,0 +1,26 @@
+{
+  "name": "dra-daniela-fajardo-web",
+  "version": "1.0.0",
+  "description": "Este proyecto es la página web oficial de la Dra. Daniela Fajardo, diseñada para mostrar su trayectoria médica, servicios y facilitar el agendamiento de citas.",
+  "main": "index.js",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingsamuell/Dra-Daniela-Fajardo-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingsamuell/Dra-Daniela-Fajardo-web/issues"
+  },
+  "homepage": "https://github.com/ingsamuell/Dra-Daniela-Fajardo-web#readme"
+}
