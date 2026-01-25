@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Sophia';
+    src: url('../assets/fonts/Sophia.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    /* Tus colores exactos */
+    --color-brand-primary: rgb(32, 58, 81);    /* Azul Petróleo */
+    --color-brand-secondary: rgb(0, 153, 148); /* Teal / Turquesa */
+    --color-brand-dark: rgb(33, 58, 81);       /* Variante oscura */
+    
+    /* Color para fondos claros (basado en tu azul pero muy suave para legibilidad) */
+    --color-brand-light: #f0f4f8; 
+    
+    --font-sophia: "Sophia", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
