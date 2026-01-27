@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Dra. Daniela Fajardo | Médico Tricólogo y Cirujano Capilar</title>
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
 </head>
 
 <body class="bg-brand-light text-slate-800 font-sans">
@@ -18,216 +19,108 @@
                 <img src="./assets/img/logo-nombre.png" alt="Dra. Daniela Fajardo" class="h-8 w-auto">
             </div>
 
-            <div id="nav-menu" class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
-                <a href="#" data-section="inicio"
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+                <a href="#inicio"
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Inicio</a>
-                <a href="#servicios" data-section="servicios"
+                <a href="#servicios"
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Servicios</a>
-                <a href="#sobre-mi" data-section="sobre-mi"
+                <a href="#ubicacion"
+                    class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Ubicación</a>
+                <a href="#sobre-mi"
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Sobre mí</a>
+
+                <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20m%C3%A9dica."
+                    target="_blank" rel="noopener noreferrer"
+                    class="bg-brand-primary text-white px-5 py-2 rounded-full hover:bg-brand-secondary transition shadow-md hover:shadow-lg">Citas</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button"
+                    class="text-brand-primary hover:text-brand-secondary transition-all duration-300 focus:outline-none cursor-pointer p-2 rounded-xl hover:bg-brand-light/50 group">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" class="transition-all duration-300" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="md:hidden bg-white border-t border-slate-100 px-4 space-y-4 shadow-xl transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0 invisible">
+            <div class="py-6 space-y-4">
+                <a href="#inicio" class="nav-link-mobile block text-brand-primary font-bold">Inicio</a>
+                <a href="#servicios" class="nav-link-mobile block text-slate-600">Servicios</a>
+                <a href="#ubicacion" class="nav-link-mobile block text-slate-600">Ubicación</a>
+                <a href="#sobre-mi" class="nav-link-mobile block text-slate-600">Sobre mí</a>
+
+                <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
+                    target="_blank" rel="noopener noreferrer"
+                    class="block bg-brand-primary text-white text-center py-3 rounded-xl font-bold">Agendar Cita</a>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28 flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2 space-y-6">
-            <span class="text-brand-secondary font-bold tracking-widest uppercase text-sm italic">Cirugía Capilar &
-                Tricología</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold text-brand-primary leading-tight font-sophia">
+    <header id="inicio"
+        class="scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-28 flex flex-col md:flex-row items-center gap-10 md:gap-12">
+
+        <div class="md:w-1/2 space-y-5 md:space-y-6 text-center md:text-left order-2 md:order-1">
+            <span class="text-brand-secondary font-bold tracking-widest uppercase text-xs md:text-sm italic">
+                Cirugía Capilar & Tricología
+            </span>
+            <h2 class="text-3xl md:text-6xl font-extrabold text-brand-primary leading-tight font-sophia">
                 Recupera tu <span class="text-brand-secondary">confianza</span> con medicina capilar avanzada.
             </h2>
-            <p class="text-lg text-slate-600 max-w-md leading-relaxed">
+            <p class="text-base md:text-lg text-slate-600 max-w-md mx-auto md:mx-0 leading-relaxed">
                 Especialista en diagnóstico y tratamiento de la alopecia mediante técnicas de cirugía capilar de última
                 generación y un enfoque humano.
             </p>
-            <div class="pt-6">
+            <div class="pt-4">
                 <a href="#servicios"
-                    class="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-brand-secondary hover:-translate-y-1 transition-all duration-300">
+                    class="inline-block bg-brand-primary text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-xl hover:bg-brand-secondary hover:-translate-y-1 transition-all duration-300 text-sm md:text-base">
                     Ver Tratamientos
                 </a>
             </div>
         </div>
-        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center relative">
-            <div class="absolute inset-0 bg-brand-secondary/10 rounded-full blur-3xl opacity-50 scale-90"></div>
+
+        <div class="md:w-1/2 flex justify-center relative order-1 md:order-2">
+            <div class="absolute inset-0 bg-brand-secondary/10 rounded-full blur-3xl opacity-50 scale-75 md:scale-90">
+            </div>
+
             <div
-                class="relative w-full max-w-md aspect-square bg-slate-200 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white z-10">
+                class="relative w-64 h-64 md:w-full md:max-w-md md:aspect-square bg-slate-200 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white z-10">
                 <img src="./assets/img/dra-daniela-hero.png" alt="Dra. Daniela Fajardo"
                     class="w-full h-full object-cover">
             </div>
         </div>
     </header>
 
-    <section id="servicios" class="bg-white py-24">
+    <section id="servicios" class="scroll-mt-20 py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h3 class="text-3xl font-bold text-brand-primary font-sophia">Servicios Especializados</h3>
+                <h3 class="text-3xl font-bold font-sophia text-brand-primary">Servicios Especializados</h3>
                 <div class="w-20 h-1 bg-brand-secondary mx-auto mt-4 rounded-full"></div>
-                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Tecnología de vanguardia y protocolos personalizados
-                    para la salud de tu cabello.</p>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">Tecnología de vanguardia para la
+                    salud de tu cabello.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div
-                    class="bg-brand-light/50 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl group overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="./assets/img/diagnostico-tricologico.png" alt="Diagnóstico"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-8">
-                        <div
-                            class="w-14 h-14 bg-white rounded-xl mb-6 flex items-center justify-center group-hover:bg-brand-secondary transition-colors shadow-sm">
-                            <svg class="w-7 h-7 text-brand-secondary group-hover:text-white" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-brand-primary font-sophia">Diagnóstico Tricológico</h4>
-                        <p class="text-slate-500 leading-relaxed text-sm">Análisis exhaustivo con tricoscopia digital
-                            para determinar el origen de la caída.</p>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-brand-light/50 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl group overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="./assets/img/cirugia-capilar.png" alt="Injerto"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-8">
-                        <div
-                            class="w-14 h-14 bg-white rounded-xl mb-6 flex items-center justify-center group-hover:bg-brand-secondary transition-colors shadow-sm">
-                            <svg class="w-7 h-7 text-brand-secondary group-hover:text-white" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.283a2 2 0 01-1.186.12l-2.014-.403a2 2 0 00-1.08.188l-1.888 1.132A2 2 0 014.409 16H4v3a2 2 0 002 2h12a2 2 0 002-2v-3.572a2 2 0 00-.572-1.428z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-brand-primary font-sophia">Injerto Capilar FUE</h4>
-                        <p class="text-slate-500 leading-relaxed text-sm">Restauración capilar mínimamente invasiva con
-                            resultados naturales y permanentes.</p>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-brand-light/50 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl group overflow-hidden">
-                    <div class="h-48 overflow-hidden">
-                        <img src="./assets/img/bioestimulacion-capilar.png" alt="Bioestimulación"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-8">
-                        <div
-                            class="w-14 h-14 bg-white rounded-xl mb-6 flex items-center justify-center group-hover:bg-brand-secondary transition-colors shadow-sm">
-                            <svg class="w-7 h-7 text-brand-secondary group-hover:text-white" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-bold mb-3 text-brand-primary font-sophia">Bioestimulación Capilar</h4>
-                        <p class="text-slate-500 leading-relaxed text-sm">Tratamientos como mesoterapia y plasma rico en
-                            plaquetas para fortalecer el folículo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre-mi" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100 relative">
-            <div class="flex flex-col md:flex-row items-stretch">
-                <div class="md:w-2/5 bg-brand-primary flex items-center justify-center p-12">
-                    <div class="relative">
-                        <div class="absolute -inset-4 border-2 border-brand-secondary/30 rounded-full animate-pulse">
-                        </div>
-                        <div
-                            class="w-64 h-64 rounded-full border-4 border-white shadow-2xl overflow-hidden relative z-10">
-                            <img src="./assets/img/dra-daniela-retrato.png" alt="Dra. Daniela Fajardo"
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-3/5 p-8 md:p-16 flex flex-col justify-center">
-                    <span class="text-brand-secondary font-bold uppercase text-xs tracking-[0.2em] mb-4">Experiencia &
-                        Vocación</span>
-                    <h3 class="text-4xl font-bold text-brand-primary mb-6 font-sophia">Dra. Daniela Fajardo</h3>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <p>
-                            Médico Cirujano con especialización en **Tricología y Cirugía Capilar**. Mi enfoque combina
-                            la precisión técnica con una visión estética personalizada para cada paciente.
-                        </p>
-                        <p>
-                            Con base en **Barcelona**, desarrollo protocolos avanzados para el tratamiento integral de
-                            la alopecia, utilizando la tecnología de diagnóstico más precisa disponible en la
-                            actualidad.
-                        </p>
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-slate-100 flex gap-6">
-                        <div>
-                            <p class="text-brand-primary font-bold text-xl">+10</p>
-                            <p class="text-slate-400 text-xs uppercase tracking-tighter">Años Exp.</p>
-                        </div>
-                        <div>
-                            <p class="text-brand-primary font-bold text-xl">FUE</p>
-                            <p class="text-slate-400 text-xs uppercase tracking-tighter">Técnica</p>
-                        </div>
-                        <div>
-                            <p class="text-brand-primary font-bold text-xl">BCN</p>
-                            <p class="text-slate-400 text-xs uppercase tracking-tighter">Sede</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ubicacion" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl font-bold font-sophia text-brand-primary">Nuestras Sedes</h3>
-                <div class="w-20 h-1 bg-brand-secondary mx-auto mt-4 rounded-full"></div>
-                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Atención especializada en los centros médicos más
-                    exclusivos.</p>
-            </div>
-
-            <div class="swiper ubicacion-swiper pb-12">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide px-4">
-                        <div
-                            class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
-                            <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
-                                <span class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Sede
-                                    Principal</span>
-                                <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Passeig de Gràcia
-                                </h4>
-                                <div class="space-y-4 text-slate-600">
-                                    <div class="flex items-start gap-3">
-                                        <svg class="w-5 h-5 text-brand-secondary mt-1 shrink-0" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                            </path>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                        </svg>
-                                        <p>Passeig de Gràcia 78, 4º 2ª<br>08008 Barcelona, España</p>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <svg class="w-5 h-5 text-brand-secondary shrink-0" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                            </path>
-                                        </svg>
-                                        <p>+34 633 39 24 30</p>
-                                    </div>
-                                </div>
-                                <div class="mt-8">
-                                    <a href="https://maps.app.goo.gl/TU_LINK_REAL" target="_blank"
-                                        class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-brand-secondary transition-colors group">
-                                        Cómo llegar
+            <div class="relative px-2 md:px-16">
+                <div class="swiper servicios-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Análisis
+                                        Avanzado</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Diagnóstico
+                                        Tricológico</h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-8">Estudio detallado del cuero
+                                        cabelludo para identificar el tipo de alopecia.</p>
+                                    <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20realizarme%20un%20Diagn%C3%B3stico%20Tricol%C3%B3gico."
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-full font-bold hover:bg-brand-secondary transition-all text-sm w-fit group">
+                                        Consultar Tratamiento
                                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -235,55 +128,383 @@
                                         </svg>
                                     </a>
                                 </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto min-h-[400px]">
+                                    <img src="./assets/img/diagnostico-tricologico.png"
+                                        class="w-full h-full object-cover">
+                                </div>
                             </div>
-                            <div class="lg:w-3/5 h-[300px] lg:h-auto min-h-[400px]">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1813476943896!2d2.161109076595511!3d41.39185019568913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f269666667%3A0x8f4b7a123456789!2sPasseig%20de%20Gr%C3%A0cia%2C%2078%2C%2008008%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                                    class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-                                    allowfullscreen="" loading="lazy">
-                                </iframe>
+                        </div>
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Cirugía
+                                        Capilar</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Injerto Capilar
+                                        FUE</h4>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-8">Técnica de extracción
+                                        folicular mínimamente invasiva con resultados naturales.</p>
+                                    <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20deseo%20informaci%C3%B3n%20sobre%20el%20Injerto%20Capilar%20FUE."
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-full font-bold hover:bg-brand-secondary transition-all text-sm w-fit group">
+                                        Consultar Tratamiento
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto min-h-[400px]">
+                                    <img src="./assets/img/cirugia-capilar.png" class="w-full h-full object-cover">
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next !text-brand-primary"></div>
-                <div class="swiper-button-prev !text-brand-primary"></div>
+                <div
+                    class="swiper-button-prev-servicios !absolute !left-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </div>
+                <div
+                    class="swiper-button-next-servicios !absolute !right-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="swiper-pagination-servicios !relative !bottom-0 mt-8 flex justify-center"></div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-brand-primary text-white py-12">
+    <section id="ubicacion" class="scroll-mt-20 py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:justify-between md:items-start border-b border-white/10 pb-8 mb-8">
-                <div class="mb-8 md:mb-0">
-                    <img src="./assets/img/logo-nombre.png" alt="Dra. Daniela Fajardo"
-                        class="h-8 w-auto mb-4 brightness-0 invert">
-                    <p class="text-brand-secondary font-bold text-sm uppercase tracking-widest">Cirugía Capilar &
-                        Tricología</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
-                    <div>
-                        <h4 class="font-bold text-brand-secondary mb-3 uppercase tracking-wider">Barcelona</h4>
-                        <p class="text-slate-300">Passeig de Gràcia 78, 4º 2ª</p>
-                        <p class="text-slate-300">Tel: +34 633 39 24 30</p>
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold font-sophia text-brand-primary">Nuestras Sedes</h3>
+                <div class="w-20 h-1 bg-brand-secondary mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-sm md:text-base">Atención especializada en los
+                    centros médicos más exclusivos.</p>
+            </div>
+
+            <div class="relative px-2 md:px-16">
+                <div class="swiper ubicacion-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Sede
+                                        Principal</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Passeig de Gràcia
+                                    </h4>
+                                    <div class="space-y-4 text-slate-600 text-sm">
+                                        <p>Passeig de Gràcia 78, 4º 2ª<br>08008 Barcelona, España</p>
+                                        <a href="tel:+34633392430"
+                                            class="font-bold text-brand-primary block hover:text-brand-secondary transition-colors text-base">Tel:
+                                            +34 633 39 24 30</a>
+                                    </div>
+                                    <div class="mt-8">
+                                        <a href="https://maps.app.goo.gl/3Z8V8V8V8V8V8V8V8" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-2 text-brand-secondary font-bold hover:text-brand-primary transition-colors group text-sm">
+                                            Cómo llegar <svg
+                                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto overflow-hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.123456789!2d2.162!3d41.391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzI3LjYiTiAywrAwOSc0My4yIkU!5e0!3m2!1ses!2ses!4v123456789"
+                                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 pointer-events-none lg:pointer-events-auto"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Islas
+                                        Baleares</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Omna Medical
+                                        Center</h4>
+                                    <div class="space-y-4 text-slate-600 text-sm">
+                                        <p>Carrer de Pere Francès, 46<br>07800 Ibiza, España</p>
+                                        <a href="tel:+34638487408"
+                                            class="font-bold text-brand-primary block hover:text-brand-secondary transition-colors text-base">Tel:
+                                            +34 638 48 74 08</a>
+                                    </div>
+                                    <div class="mt-8">
+                                        <a href="https://maps.app.goo.gl/IbizaMap" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-2 text-brand-secondary font-bold hover:text-brand-primary transition-colors group text-sm">
+                                            Cómo llegar <svg
+                                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto overflow-hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.446342890526!2d1.428678076615715!3d38.91428384534125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1299470000000001%3A0x0!2zMzjCsDU0JzUxLjQiTiAxwrAyNSc1MS4xIkU!5e0!3m2!1ses!2ses!4v1700000000"
+                                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 pointer-events-none lg:pointer-events-auto"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Sarrià-Sant
+                                        Gervasi</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Turó Park Clinics
+                                    </h4>
+                                    <div class="space-y-4 text-slate-600 text-sm">
+                                        <p>Plaça de Sant Gregori Taumaturg, 5<br>08021 Barcelona, España</p>
+                                        <a href="tel:+34932529729"
+                                            class="font-bold text-brand-primary block hover:text-brand-secondary transition-colors text-base">Tel:
+                                            +34 932 52 97 29</a>
+                                    </div>
+                                    <div class="mt-8">
+                                        <a href="https://maps.app.goo.gl/TuroParkMap" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-2 text-brand-secondary font-bold hover:text-brand-primary transition-colors group text-sm">
+                                            Cómo llegar <svg
+                                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto overflow-hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.8!2d2.138!3d41.393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzM0LjgiTiAywrAwOCcxNi44IkU!5e0!3m2!1ses!2ses!4v1700000001"
+                                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 pointer-events-none lg:pointer-events-auto"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide py-4">
+                            <div
+                                class="bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm flex flex-col lg:flex-row items-stretch">
+                                <div class="lg:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                                    <span
+                                        class="text-brand-secondary font-bold uppercase text-xs tracking-widest mb-4">Terrassa</span>
+                                    <h4 class="text-2xl font-bold text-brand-primary mb-6 font-sophia">Grimalt
+                                        Dermatología</h4>
+                                    <div class="space-y-4 text-slate-600 text-sm">
+                                        <p>Carrer Major, 16, 1r<br>08221 Terrassa, España</p>
+                                        <a href="tel:+34937801115"
+                                            class="font-bold text-brand-primary block hover:text-brand-secondary transition-colors text-base">Tel:
+                                            +34 937 80 11 15</a>
+                                    </div>
+                                    <div class="mt-8">
+                                        <a href="https://maps.app.goo.gl/TerrassaMap" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-2 text-brand-secondary font-bold hover:text-brand-primary transition-colors group text-sm">
+                                            Cómo llegar <svg
+                                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:w-3/5 h-[250px] md:h-[400px] lg:h-auto overflow-hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2987.5!2d2.011!3d41.562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDMzJzQzLjIiTiAywrAwMCczOS42IkU!5e0!3m2!1ses!2ses!4v1700000002"
+                                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 pointer-events-none lg:pointer-events-auto"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div>
-                        <h4 class="font-bold text-brand-secondary mb-3 uppercase tracking-wider">Ibiza</h4>
-                        <p class="text-slate-300">Carrer de Pere Francès, 46</p>
-                        <p class="text-slate-300">Tel: +34 638 48 74 08</p>
+                </div>
+
+                <div
+                    class="swiper-button-prev !absolute !left-0 !top-1/2 !w-10 !h-10 !bg-white !border !border-slate-200 !rounded-full !shadow-md !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all after:!hidden !hidden md:!flex items-center justify-center z-10 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </div>
+                <div
+                    class="swiper-button-next !absolute !right-0 !top-1/2 !w-10 !h-10 !bg-white !border !border-slate-200 !rounded-full !shadow-md !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all after:!hidden !hidden md:!flex items-center justify-center z-10 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+
+                <div class="swiper-pagination !-bottom-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="scroll-mt-20 py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100 relative">
+            <div class="flex flex-col md:flex-row items-stretch">
+                <div class="md:w-2/5 bg-brand-primary flex items-center justify-center p-10 md:p-12">
+                    <div class="relative">
+                        <div class="absolute -inset-4 border-2 border-brand-secondary/30 rounded-full animate-pulse">
+                        </div>
+                        <div
+                            class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-2xl overflow-hidden relative z-10">
+                            <img src="./assets/img/dra-daniela-retrato.png" alt="Dra. Daniela Fajardo"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8 md:p-16 flex flex-col justify-center text-center md:text-left">
+                    <span
+                        class="text-brand-secondary font-bold uppercase text-xs tracking-[0.2em] mb-4 block">Experiencia
+                        & Vocación</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-primary mb-6 font-sophia">Dra. Daniela Fajardo
+                    </h3>
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
+                        <p>Médico Cirujano con especialización en <span
+                                class="text-brand-primary font-semibold">Tricología y Cirugía Capilar</span>. Mi enfoque
+                            combina la precisión técnica con una visión estética personalizada.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-slate-100 grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <p class="text-brand-primary font-bold text-xl">+10</p>
+                            <p class="text-slate-400 text-[10px] md:text-xs uppercase font-medium">Años Exp.</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-brand-primary font-bold text-xl">FUE</p>
+                            <p class="text-slate-400 text-[10px] md:text-xs uppercase font-medium">Técnica</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-brand-primary font-bold text-xl">BCN</p>
+                            <p class="text-slate-400 text-[10px] md:text-xs uppercase font-medium">Sede</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center text-slate-400 text-xs italic">
-                &copy; 2026 Dra. Daniela Fajardo. Todos los derechos reservados.
+        </div>
+    </section>
+
+    <footer class="bg-brand-primary text-white pt-16 pb-8 relative z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/10 pb-12">
+
+                <div class="space-y-6 text-center md:text-left">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-1">Dra. Daniela Fajardo</h4>
+                        <p class="text-brand-secondary font-bold text-xs uppercase tracking-widest italic">
+                            Medicina Capilar Avanzada
+                        </p>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                        Especialista en soluciones integrales para la salud capilar y cirugía robótica FUE con enfoque
+                        estético.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-5">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-brand-secondary transition-colors" title="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-brand-secondary transition-colors" title="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:dradanielafajardor@gmail.com"
+                            class="hover:text-brand-secondary transition-colors" title="Email">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold text-brand-secondary mb-6 uppercase tracking-wider text-sm">Menú de Navegación
+                    </h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#" class="text-slate-300 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios"
+                                class="text-slate-300 hover:text-white transition-colors">Tratamientos</a></li>
+                        <li><a href="#ubicacion" class="text-slate-300 hover:text-white transition-colors">Nuestras
+                                Sedes</a></li>
+                        <li><a href="#sobre-mi" class="text-slate-300 hover:text-white transition-colors">Sobre la Dra.
+                                Daniela</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold text-brand-secondary mb-6 uppercase tracking-wider text-sm">Nuestras Clínicas
+                    </h4>
+                    <ul class="space-y-5 text-xs text-slate-300">
+                        <li class="flex flex-col items-center md:items-start gap-1">
+                            <span class="text-white font-bold text-sm">Barcelona - Passeig de Gràcia</span>
+                            <p>Passeig de Gràcia 78, 4º 2ª</p>
+                        </li>
+                        <li class="flex flex-col items-center md:items-start gap-1">
+                            <span class="text-white font-bold text-sm">Barcelona - Turó Park</span>
+                            <p>Plaça de Sant Gregori Taumaturg, 5</p>
+                        </li>
+                        <li class="flex flex-col items-center md:items-start gap-1">
+                            <span class="text-white font-bold text-sm">Ibiza - Omna Medical</span>
+                            <p>Carrer de Pere Francès, 46</p>
+                        </li>
+                        <li class="flex flex-col items-center md:items-start gap-1">
+                            <span class="text-white font-bold text-sm">Terrassa - Grimalt Dermatología</span>
+                            <p>Carrer Major, 16, 1r</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-slate-400">
+                <div class="text-center md:text-left">
+                    <p>© 2026 Dra. Daniela Fajardo. Todos los derechos reservados.</p>
+                    <p class="mt-1 italic">Nº de Colegiado: 3463339 (Ejemplo)</p>
+                </div>
+
+                <div class="flex gap-6 uppercase tracking-widest">
+                    <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookies</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/34633392430"
-        class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all z-50 group flex items-center hover:shadow-[#25d36666]">
+    <a id="whatsapp-btn"
+        href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20con%20usted."
+        target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all z-40 group flex items-center">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path
                 d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.481 5.228 3.481 8.403c0 6.556-5.332 11.888-11.888 11.888-2.003 0-3.966-.505-5.707-1.464l-6.289 1.651zm6.136-4.218l.343.203c1.436.852 3.085 1.301 4.773 1.301 4.965 0 9.012-4.047 9.012-9.012 0-2.405-.937-4.666-2.637-6.367s-3.962-2.637-6.366-2.637c-4.966 0-9.012 4.047-9.012 9.012 0 1.83.555 3.618 1.605 5.163l.223.327-.999 3.649 3.74-.981z">
@@ -295,60 +516,7 @@
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        const swiper = new Swiper('.ubicacion-swiper', {
-            loop: true,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // Efecto suave de desvanecimiento o deslizamiento
-            effect: 'slide',
-            speed: 800,
-        });
-    </script>
-
-    <script>
-        const sections = document.querySelectorAll('header, section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.6 // Se activa cuando el 60% de la sección es visible
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id') || 'inicio';
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('text-brand-secondary', 'border-b-2', 'border-brand-secondary');
-                        link.classList.add('text-slate-600');
-
-                        if (link.getAttribute('href') === `#${id}` || (id === 'inicio' && link.getAttribute('href') === '#')) {
-                            link.classList.add('text-brand-secondary', 'border-b-2', 'border-brand-secondary');
-                            link.classList.remove('text-slate-600');
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => {
-            // Asegúrate de que el header tenga id="inicio" si quieres que se marque
-            if (section.tagName === 'HEADER') section.id = 'inicio';
-            observer.observe(section);
-        });
-    </script>
-
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
