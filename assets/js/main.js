@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnchorScroll();
     initServicesSlider();
     handleWhatsappSticky();
+    initFaqAccordion();
 });
 
 /**
@@ -276,4 +277,28 @@ function handleWhatsappSticky() {
     }
 
     observer.observe(footer);
+}
+
+// Añade esta función y llámala en el DOMContentLoaded
+function initFaqAccordion() {
+    const triggers = document.querySelectorAll('.faq-trigger');
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const content = trigger.nextElementSibling;
+            const isActive = trigger.classList.contains('active');
+
+            // Cerramos otros si están abiertos
+            document.querySelectorAll('.faq-trigger').forEach(other => {
+                other.classList.remove('active');
+                other.nextElementSibling.style.maxHeight = null;
+            });
+
+            // Si el actual no estaba activo, lo abrimos
+            if (!isActive) {
+                trigger.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
 }
