@@ -4,40 +4,56 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initLocationSlider();
+    // Inicializamos el carrusel de Servicios
+    initSlider(
+        '.servicios-swiper',
+        '.swiper-button-next-servicios',
+        '.swiper-button-prev-servicios',
+        '.swiper-pagination-servicios'
+    );
+
+    // Inicializamos el carrusel de Ubicación
+    initSlider(
+        '.ubicacion-swiper',
+        '.swiper-button-next-ubicacion',
+        '.swiper-button-prev-ubicacion',
+        '.swiper-pagination-ubicacion'
+    );
+
     initScrollSpy();
     initMobileMenu();
     initAnchorScroll();
-    initServicesSlider();
     handleWhatsappSticky();
     initFaqAccordion();
 });
 
-/**
- * Configuración del Carrusel de Sedes (Swiper.js)
- */
-function initLocationSlider() {
-    const swiper = new Swiper('.ubicacion-swiper', {
+function initSlider(selector, next, prev, pagination) {
+    if (!document.querySelector(selector)) return;
+
+    return new Swiper(selector, {
         loop: true,
+        spaceBetween: 30,
+        speed: 1000,
         autoplay: {
             delay: 5000,
+            disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: next,
+            prevEl: prev,
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: pagination,
             clickable: true,
         },
-        // Esto permite que el usuario use el dedo en móvil
         breakpoints: {
             320: { allowTouchMove: true },
             768: { allowTouchMove: false }
         }
     });
 }
+
 /**
  * Lógica de Scroll Spy para el Navbar
  */
@@ -132,8 +148,7 @@ function initMobileMenu() {
     const iconPath = document.getElementById('menu-icon');
     const links = document.querySelectorAll('.nav-link-mobile');
     // Seleccionamos específicamente las secciones por ID
-    const sections = document.querySelectorAll('#inicio, #servicios, #ubicacion, #sobre-mi');
-
+    const sections = document.querySelectorAll('#inicio, #servicios, #ubicacion, #faq, #sobre-mi');
     if (!btn || !menu || !iconPath) return;
 
     const burgerPath = "M4 6h16M4 12h16M4 18h16";
@@ -144,11 +159,12 @@ function initMobileMenu() {
         isMenuChanging = true;
         if (show) {
             menu.classList.remove('max-h-0', 'opacity-0', 'invisible');
-            menu.classList.add('max-h-[500px]', 'opacity-100', 'visible');
+            // Aumentamos de 500px a 600px para dar margen al nuevo espaciado
+            menu.classList.add('max-h-[600px]', 'opacity-100', 'visible');
             iconPath.setAttribute('d', xPath);
         } else {
             menu.classList.add('max-h-0', 'opacity-0', 'invisible');
-            menu.classList.remove('max-h-[500px]', 'opacity-100', 'visible');
+            menu.classList.remove('max-h-[600px]', 'opacity-100', 'visible');
             iconPath.setAttribute('d', burgerPath);
         }
         setTimeout(() => { isMenuChanging = false; }, 500);
@@ -204,42 +220,6 @@ function initMobileMenu() {
 
     links.forEach(link => {
         link.addEventListener('click', () => toggleMenu(false));
-    });
-}
-
-// Añade esto a tu initServicesSlider en main.js
-function initServicesSlider() {
-    const sliderSelector = '.servicios-swiper';
-    if (!document.querySelector(sliderSelector)) return;
-
-    const swiper = new Swiper(sliderSelector, {
-        loop: true,
-        spaceBetween: 30,
-        speed: 1000,
-        autoplay: {
-            delay: 5000, // Cambia cada 5 segundos
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true, // Se detiene al poner el mouse encima (PC)
-        },
-        navigation: {
-            nextEl: '.swiper-button-next-servicios',
-            prevEl: '.swiper-button-prev-servicios',
-        },
-        pagination: {
-            el: '.swiper-pagination-servicios',
-            clickable: true,
-        },
-        // Lógica de Movimiento
-        breakpoints: {
-            // Móvil
-            320: {
-                allowTouchMove: true, // Permite mover con los dedos
-            },
-            // Escritorio
-            768: {
-                allowTouchMove: false, // Bloquea arrastre con mouse para usar flechas
-            }
-        }
     });
 }
 

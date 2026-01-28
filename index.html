@@ -26,6 +26,8 @@
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Servicios</a>
                 <a href="#ubicacion"
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Ubicación</a>
+                <a href="#faq"
+                    class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Preguntas</a>
                 <a href="#sobre-mi"
                     class="nav-link text-slate-600 hover:text-brand-secondary transition duration-300">Sobre mí</a>
 
@@ -46,16 +48,19 @@
         </div>
 
         <div id="mobile-menu"
-            class="md:hidden bg-white border-t border-slate-100 px-4 space-y-4 shadow-xl transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0 invisible">
-            <div class="py-6 space-y-4">
-                <a href="#inicio" class="nav-link-mobile block text-brand-primary font-bold">Inicio</a>
-                <a href="#servicios" class="nav-link-mobile block text-slate-600">Servicios</a>
-                <a href="#ubicacion" class="nav-link-mobile block text-slate-600">Ubicación</a>
-                <a href="#sobre-mi" class="nav-link-mobile block text-slate-600">Sobre mí</a>
+            class="md:hidden bg-white border-t border-slate-100 px-6 shadow-xl transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0 invisible">
+            <div class="py-10 space-y-6">
+                <a href="#inicio" class="nav-link-mobile block text-brand-primary font-bold text-lg">Inicio</a>
+                <a href="#servicios" class="nav-link-mobile block text-slate-600 text-lg">Servicios</a>
+                <a href="#ubicacion" class="nav-link-mobile block text-slate-600 text-lg">Ubicación</a>
+                <a href="#sobre-mi" class="nav-link-mobile block text-slate-600 text-lg">Sobre mí</a>
 
-                <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
-                    target="_blank" rel="noopener noreferrer"
-                    class="block bg-brand-primary text-white text-center py-3 rounded-xl font-bold">Agendar Cita</a>
+                <div class="pt-4">
+                    <a href="https://wa.me/34633392430?text=Hola%20Dra.%20Daniela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
+                        target="_blank" rel="noopener noreferrer"
+                        class="block bg-brand-primary text-white text-center py-4 rounded-xl font-bold shadow-md">Agendar
+                        Cita</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -83,12 +88,12 @@
         </div>
 
         <div class="md:w-1/2 flex justify-center relative order-1 md:order-2">
-            <div class="absolute inset-0 bg-brand-secondary/10 rounded-full blur-[60px] transform scale-90"></div>
+            <div class="absolute inset-0 bg-brand-secondary/10 rounded-full blur-[80px] transform scale-125"></div>
 
             <div
-                class="relative w-72 h-72 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] rounded-3xl overflow-hidden shadow-xl border-4 border-white z-10">
+                class="relative w-80 h-[420px] md:w-96 md:h-[520px] lg:w-[500px] lg:h-[650px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white z-10">
                 <img src="./assets/img/dra-daniela-hero.png" alt="Dra. Daniela Fajardo"
-                    class="w-full h-full object-cover">
+                    class="w-full h-full object-cover object-top">
             </div>
         </div>
     </header>
@@ -373,20 +378,21 @@
                 </div>
 
                 <div
-                    class="swiper-button-prev-servicios !absolute !left-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
+                    class="swiper-button-prev-ubicacion !absolute !left-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                         </path>
                     </svg>
                 </div>
+
                 <div
-                    class="swiper-button-next-servicios !absolute !right-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
+                    class="swiper-button-next-ubicacion !absolute !right-0 !top-1/2 !w-12 !h-12 !bg-white !border !border-slate-200 !rounded-full !shadow-lg !text-brand-primary hover:!bg-brand-secondary hover:!text-white transition-all z-10 hidden md:flex items-center justify-center cursor-pointer">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
 
-                <div class="swiper-pagination !-bottom-6"></div>
+                <div class="swiper-pagination-ubicacion !relative !bottom-0 mt-8 flex justify-center"></div>
             </div>
         </div>
     </section>
@@ -397,7 +403,7 @@
             <div class="text-center mb-16">
                 <h3 class="text-3xl md:text-4xl font-bold font-sophia text-brand-primary">Preguntas Frecuentes</h3>
                 <div class="w-20 h-1 bg-brand-secondary mx-auto mt-4 rounded-full"></div>
-                
+
             </div>
 
             <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-6 md:p-12 lg:p-16">
@@ -549,8 +555,9 @@
                         estético.
                     </p>
                     <div class="flex justify-center md:justify-start gap-5">
-                        <a href="https://www.instagram.com/dradanielafajardo?igsh=MXFtaWUzeXV5djA4Mg==" target="_blank" rel="noopener noreferrer"
-                            class="hover:text-brand-secondary transition-colors" title="Instagram">
+                        <a href="https://www.instagram.com/dradanielafajardo?igsh=MXFtaWUzeXV5djA4Mg==" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-brand-secondary transition-colors"
+                            title="Instagram">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
