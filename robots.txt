@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dradanielafajardor.com/sitemap.xml
+Sitemap: https://dradanielafajardo.netlify.app/sitemap.xml
